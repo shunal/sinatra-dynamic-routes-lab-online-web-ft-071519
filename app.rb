@@ -1,3 +1,4 @@
+require 'pry'
 require_relative 'config/environment'
 
 class App < Sinatra::Base
@@ -15,7 +16,7 @@ class App < Sinatra::Base
    @number = params[:number]
    @phrase = params[:phrase]
    num = "#{@number.to_i}"
-   
+   binding.pry
  end
  
  get "/say/:word1/:word2/:word3/:word4/:word5" do
